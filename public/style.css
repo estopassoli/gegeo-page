@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #000;
+    --main-bg-color: #f1f1f1;
+    --main-font-golden: #AA9366;
+}
+
+::-webkit-scrollbar-button {
+    width: 7px;
+    background-color: var(--main-font-golden);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-font-golden);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.hidden-y {
+    overflow-y: hidden;
+}
+
+.container-vertical {
+    width: 40%;
+    height: max-content;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+}
+
+body {
+    color: #fff;
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadow-bottom {
+    -webkit-box-shadow: 0px 4px 19px -10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 4px 19px -10px rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 19px -10px rgba(0, 0, 0, 1);
+}
+
+.golden {
+    color: var(--main-font-golden);
+}
+
+.show-list-button {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: var(--main-font-golden);
+    background-color: #fff;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.list {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+ul,
+li {
+    list-style: none;
+    overflow: hidden;
+}
+
+
+.list-content {
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    color: var(--main-font-golden);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+}
+
+.container-horizontal {
+    padding: 20px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.cards {
+    display: grid;
+    /* grid with 2 columns gap 15px */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+}
+
+.card>img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 2px solid #f1f1f1;
+}
+
+.card {
+    font-size: 16px;
+    width: 100%;
+    background-color: #cccc;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    padding-right: 50px;
+    transition: all ease-in-out .2s;
+}
+
+.card:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btn {
+    color: #fff;
+    padding: 20px;
+    width: max-content;
+    border-radius: 20px;
+    background-color: #FFBDD3;
+    transition: all ease-in-out 0.3s;
+}
+
+
+
+.btn:hover {
+    background-color: var(--main-font-golden);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#myProgress {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+#myBar {
+    transition: all ease-in-out .1s;
+    width: 0%;
+    height: max-content;
+    max-height: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 10px;
+    font-size: 12px;
+    background-color: #4b0c29;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.whatsapp-button i {
+    color: #fff;
+}
+
+.whatsapp-button>a {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out .2s;
+    z-index: 999;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+}
+
+i {
+    transition: all ease-in-out .2s;
+    font-size: 40px;
+    width: max-content;
+    padding: 5px;
+}
+
+.vinho {
+    background-color: #4b0c29;
+    font-weight: 800;
+    animation: pulse 2s infinite;
+}
+
+.preto {
+    background-color: #000 !important;
+    font-weight: 800;
+    animation: pulse 2s infinite;
+}
+
+.branco-bg {
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+.bg-marrom {
+    background-color: #fff !important;
+    color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .2s;
+}
+
+.bg-marrom:hover {
+    transform: scale(1.08);
+}
+
+.destacar {
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+
+.papper {
+    padding: 15px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.whatsapp-button>a:hover {
+    transform: scale(1.1);
+}
+
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(81, 204, 44, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(71, 204, 44, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(63, 204, 44, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(57, 204, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(76, 204, 44, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(95, 204, 44, 0);
+        box-shadow: 0 0 0 10px rgba(103, 204, 44, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(44, 204, 65, 0);
+        box-shadow: 0 0 0 0 rgba(44, 204, 57, 0);
+    }
+}
+
+@-webkit-keyframes pulsebranco {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes pulsebranco {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out .2s;
+}
+
+b {
+    font-weight: 800;
+}
+
+.price-to {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.price-to span {
+
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.price-to h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.dashed {
+    --balloon-border-radius: 2px;
+    --balloon-color: rgba(16, 16, 16, 0.95);
+    --balloon-text-color: #fff;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --icon-color: #fff;
+    --icon-hover: #fff;
+    --background-color: #00c800;
+    --background-hover: #009600;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: center;
+    letter-spacing: 0px;
+    text-shadow: none;
+    color: #4b0c29;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: none repeat scroll 0 0 transparent;
+    font-size: 100%;
+    box-sizing: border-box;
+    outline: 0;
+    line-height: inherit;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    text-decoration: line-through;
+    font-weight: inherit;
+}
+
+.destaque {
+    background-color: #AA9366;
+    padding: 7px 15px;
+    border-radius: 20px;
+    width: 100%;
+    font-weight: 800;
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    color: #000;
+    text-align: justify;
+    text-justify: inter-word;
+    gap: 5px;
+}
+
+.line {
+    width: 70%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    font-weight: 800;
+    font-size: 48px;
+    color: #fff;
+    padding: 25px;
+    background-color: #AA9366;
+    border-radius: 15px;
+}
+
+
+.cartoes {
+    background-image: url("https://cdn.greatpages.com.br/curso.nayalexandre.com.br-vendas-osf-v2/1673930066/imagens/desktop/139569_1_16672453836360254729a5b.png");
+    border: 0px solid rgb(163, 186, 198);
+    border-radius: 0px;
+    opacity: 63;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+
+@media screen and (max-width: 678px) {
+    iframe {
+        width: 100%;
+        height: 320px
+    }
+
+    .container-vertical {
+        max-width: 638px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .papper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .bg-marrom {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .bg-marrom>i {
+        font-size: 1.5rem;
+        padding: 20px;
+        width: max-content;
+    }
+
+    .show-list-button {
+        width: 100%;
+        padding: 7px;
+        font-size: .8rem;
+    }
+
+    .show-list-button>i {
+        font-size: 1.5rem;
+    }
+
+    .container-vertical>.container {
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .container>ul {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .tempo {
+        font-size: 1rem;
+
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card>img {
+        width: 64px;
+    }
+}
