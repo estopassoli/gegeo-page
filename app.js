@@ -31,6 +31,9 @@ app.post('/upload/html/file', (req, res) => {
     const { codigo, senha } = req.body;
     if (senha == '13170104a') {
         fs.writeFileSync('./public/index.html', codigo);
+        const antiga = fs.readFileSync('./public/index.html', 'utf8');
+        /* salvar backup de antiga */
+        fs.writeFileSync('./public/backup.html', antiga);
         res.send('Pronto! código atualizado. <3')
     } else {
         res.send('Senha incorreta! :(')
